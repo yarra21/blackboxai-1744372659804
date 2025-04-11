@@ -1,0 +1,290 @@
+/* Mevcut stiller korunacak */
+ 
+/* Özel Fontlar */
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sayfa Geçiş Animasyonları */
+.page-transition {
+    animation: pageTransition 0.5s ease-in-out;
+}
+
+@keyframes pageTransition {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sayfa Çıkış Animasyonu */
+.page-exit {
+    animation: pageExit 0.5s ease-in-out;
+}
+
+@keyframes pageExit {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* RGB Dalga Efekti */
+@keyframes rgbWave {
+    0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+.rgb-wave {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    background-size: 400% 400%;
+    animation: rgbWave 10s ease infinite;
+}
+
+/* Neon Parıltı Efekti */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #6366f1,
+                     0 0 40px #6366f1,
+                     0 0 50px #6366f1;
+    }
+    50% {
+        text-shadow: 0 0 20px #fff,
+                     0 0 30px #8b5cf6,
+                     0 0 40px #8b5cf6,
+                     0 0 50px #8b5cf6,
+                     0 0 60px #8b5cf6;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #6366f1,
+                     0 0 40px #6366f1,
+                     0 0 50px #6366f1;
+    }
+}
+
+.neon-text {
+    animation: neonGlow 2s ease-in-out infinite;
+}
+
+/* 3D Hover Efekti */
+@keyframes float3D {
+    0% {
+        transform: perspective(1000px) rotateX(0) rotateY(0);
+    }
+    25% {
+        transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    }
+    75% {
+        transform: perspective(1000px) rotateX(-5deg) rotateY(-5deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(0) rotateY(0);
+    }
+}
+
+.float-3d {
+    animation: float3D 6s ease-in-out infinite;
+}
+
+/* Buton Animasyonları */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(139, 92, 246, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+    }
+}
+
+.button-animate {
+    animation: buttonPulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.button-animatehover {
+    animation: none;
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #6366f1, #8b5cf6, #6366f1);
+    background-size: 200% 200%;
+    animation: rgbWave 3s ease infinite;
+}
+
+/* Kart Hover Efektleri */
+.card-hover-effect {
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.card-hover-effecthover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+/* Parıltı Efekti */
+@keyframes sparkle {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.5;
+    }
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.5;
+    }
+}
+
+.sparkle {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: sparkle 2s linear infinite;
+}
+
+/* Modern Border Animasyonu */
+@keyframes borderGlow {
+    0% {
+        border-color: #6366f1;
+        box-shadow: 0 0 10px #6366f1;
+    }
+    50% {
+        border-color: #8b5cf6;
+        box-shadow: 0 0 20px #8b5cf6;
+    }
+    100% {
+        border-color: #6366f1;
+        box-shadow: 0 0 10px #6366f1;
+    }
+}
+
+.border-animate {
+    border: 2px solid transparent;
+    animation: borderGlow 3s infinite;
+}
+
+/* Logo Animasyonu */
+@keyframes logoFloat {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    75% {
+        transform: translateY(10px) rotate(-2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.logo-animate {
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+/* Özel Scroll Bar */
+-webkit-scrollbar {
+    width: 10px;
+}
+
+-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+    border-radius: 5px;
+}
+
+-webkit-scrollbar-thumbhover {
+    background: linear-gradient(to bottom, #8b5cf6, #6366f1);
+}
+
+/* Arka Plan Animasyonu */
+.bg-animate {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #1a1a2e, #16213e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Feature İkon Animasyonu */
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-iconhover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Premium Badge Animasyonu */
+.premium-badge {
+    animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+    }
+}
+
+/* Hover Glow Efekti */
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glowhover {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8),
+                 0 0 20px rgba(139, 92, 246, 0.8),
+                 0 0 30px rgba(139, 92, 246, 0.8);
+}
